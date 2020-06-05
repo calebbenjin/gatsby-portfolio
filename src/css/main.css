@@ -3,7 +3,7 @@
 Fonts
 ===============
 */
-/* @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap"); */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 /*
 =============== 
@@ -42,7 +42,7 @@ Variables
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.2rem;
-  --radius: 0.25rem;
+  --radius: 0.35rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
@@ -68,6 +68,44 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
   margin-top: 5rem;
+}
+
+.logo {
+  color: var(--clr-grey-1);
+  font-size: 1.5rem;
+  text-transform: uppercase;   
+  font-weight: bolder; 
+  cursor: pointer;
+  font-family: var(--ff-secondary);
+}
+.logo span {
+  color: #00AEB6;
+  
+}
+.hero-img {
+  animation: shake 3s cubic-bezier(.36,.17,.19,.97) infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  width: 550px;
+  height: 550px;
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 ul {
   list-style-type: none;
@@ -494,6 +532,7 @@ Services
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  box-shadow: 6px 2px 10px rgba(0,0,0,0.2);
 }
 .service-icon {
   font-size: 2rem;
