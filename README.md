@@ -1,6 +1,6 @@
 ## My Portfolio
 
-[react icons] :https://react-icons.github.io/react-icons/
+[ website ] :https://calebbenjin.netlify.app/
 
 ```Built with Gatsby & Strapi
 ```

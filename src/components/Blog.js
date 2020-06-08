@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const Blog = ({id, title, date, image, category, slug, desc}) => {
   return <Link to={`/blogs/${slug}`} key={id} className="blog">
     <article>
-      <Image fluid={image.childImageSharp.fluid} className="blog-img" />
+      {image && <Image fluid={image.childImageSharp.fluid} className="blog-img" />}
       <div className="blog-card">
         <h4>{title}</h4>
         <p>{desc}</p>
@@ -18,6 +18,14 @@ const Blog = ({id, title, date, image, category, slug, desc}) => {
   </Link>
 }
 
-Blog.propTypes = {}
+Blog.propTypes = {
+id:PropTypes.string.isRequired,
+title:PropTypes.string.isRequired,
+category:PropTypes.string.isRequired,
+date:PropTypes.string.isRequired,
+slug:PropTypes.string.isRequired,
+desc:PropTypes.string.isRequired,
+image:PropTypes.string.isRequired, 
+}
 
 export default Blog
